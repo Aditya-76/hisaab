@@ -125,6 +125,18 @@ CREATE TABLE diagnostics_log (
 )
 `;
 
+/**
+ * Key-value app settings (migration 002): language, later the platform
+ * allowlist and retention toggles. A table, not AsyncStorage — one store,
+ * one export/delete path, no extra dependency (D-027).
+ */
+export const SETTINGS_SQL = `
+CREATE TABLE settings (
+  key TEXT PRIMARY KEY,
+  value TEXT NOT NULL
+)
+`;
+
 /** Split a multi-statement DDL string into single executable statements. */
 export function statementsOf(sql: string): string[] {
   return sql

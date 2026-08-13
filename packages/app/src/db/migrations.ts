@@ -1,5 +1,5 @@
 import type { Db, DbExecutor } from "./db.js";
-import { NORMALIZED_SQL, RAW_EVENTS_SQL, statementsOf } from "./schema.js";
+import { NORMALIZED_SQL, RAW_EVENTS_SQL, SETTINGS_SQL, statementsOf } from "./schema.js";
 
 /**
  * Ordered migrations, gated by PRAGMA user_version (TECH-DESIGN §4).
@@ -22,6 +22,13 @@ export const MIGRATIONS: readonly Migration[] = [
       // bootstrapped it before the JS runtime ever started (D-024).
       for (const stmt of statementsOf(RAW_EVENTS_SQL)) await tx.execute(stmt);
       for (const stmt of statementsOf(NORMALIZED_SQL)) await tx.execute(stmt);
+    },
+  },
+  {
+    version: 2,
+    description: "settings key-value table (language, later allowlist/retention) — D-027",
+    async up(tx) {
+      for (const stmt of statementsOf(SETTINGS_SQL)) await tx.execute(stmt);
     },
   },
 ];

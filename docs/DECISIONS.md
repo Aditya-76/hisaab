@@ -148,6 +148,14 @@ The app's DB/pipeline code (migrations, repos, drainer) is written against a 4-m
 
 ---
 
+## D-027 · 2026-08-13 · Accepted — app settings live in a SQLite key-value table, not AsyncStorage
+
+Migration 002 adds a `settings (key, value)` table; the language choice (and later the platform allowlist and retention toggles) is stored there via a typed-key repo (`db/settings.ts`).
+**Alternatives considered:** `@react-native-async-storage/async-storage` (a second store and a new dependency: "export my data" and "delete everything" would have to walk two systems to honor the privacy pledge); MMKV (native dependency for a handful of keys).
+**Why:** hisaab already owns one durable store. One store means one export path, one delete-everything path, one backup posture (`allowBackup=false` covers it), and zero added dependencies for the license audit.
+
+---
+
 ## How to add an entry
 
 1. Copy the format: ID, date, status, one-line decision, alternatives considered, why (and consequences).

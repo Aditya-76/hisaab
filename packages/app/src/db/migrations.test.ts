@@ -23,8 +23,22 @@ describe("migrations", () => {
         "payout_matches",
         "expenses",
         "diagnostics_log",
+        "settings",
       ]),
     );
+    db.close();
+  });
+
+  it("upgrades a v1 database in place (migration 002 adds settings)", async () => {
+    const db = openNodeDb();
+    await migrate(db, MIGRATIONS.slice(0, 1));
+    expect(await currentSchemaVersion(db)).toBe(1);
+
+    await migrate(db);
+    const { rows } = await db.execute(
+      "SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'settings'",
+    );
+    expect(rows).toEqual([{ name: "settings" }]);
     db.close();
   });
 

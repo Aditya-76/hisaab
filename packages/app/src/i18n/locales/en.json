@@ -1,15 +1,53 @@
 {
-  "shell": {
-    "title": "hisaab",
-    "subtitle": "Phase 2 dev shell — the dashboard arrives in Phase 3",
-    "captureStatus": "Capture status",
-    "notificationAccess": "Notification access",
-    "granted": "On",
-    "denied": "Off",
-    "grantNotificationAccess": "Turn on notification access",
-    "lastEvent": "Last captured",
-    "never": "nothing captured yet",
-    "drained": "{{parsed}} parsed · {{unparsed}} waiting · {{ignored}} skipped"
+  "tabs": {
+    "home": "Home",
+    "orders": "Orders",
+    "inbox": "Inbox",
+    "settings": "Settings"
+  },
+  "common": {
+    "back": "Back",
+    "close": "Close"
+  },
+  "home": {
+    "title": "Today's hisaab",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "netOrders_one": "net · {{count}} order",
+    "netOrders_other": "net · {{count}} orders",
+    "orderCount_one": "{{count}} order",
+    "orderCount_other": "{{count}} orders",
+    "expenses": "Expenses",
+    "thisWeek": "This week",
+    "unparsedBanner_one": "{{count}} notification not understood",
+    "unparsedBanner_other": "{{count}} notifications not understood",
+    "accessRevoked": "hisaab can't see new orders.",
+    "fix": "Fix",
+    "zeroDay": "Day off? See you tomorrow.",
+    "emptyFirstRunTitle": "Go online. Deliver. hisaab will do the hisaab.",
+    "emptyFirstRunBody": "Your orders will appear here automatically — nothing to type. Everything stays on your phone."
+  },
+  "expense": {
+    "title": "Add expense",
+    "categories": {
+      "fuel": "Fuel",
+      "recharge": "Recharge",
+      "rent": "Rent",
+      "other": "Other"
+    },
+    "amountLabel": "Amount in rupees",
+    "recent": "Recent:",
+    "addNote": "+ Add a note",
+    "notePlaceholder": "Note (optional)",
+    "save": "Save"
+  },
+  "orders": {
+    "title": "Orders",
+    "all": "All",
+    "empty": "No orders yet — they appear here automatically.",
+    "emptyPlatform": "No orders from {{platform}}.",
+    "adjustment": "adjustment",
+    "tip": "tip {{amount}}"
   },
   "unparsed": {
     "title": "Couldn't read these yet",
@@ -19,5 +57,65 @@
     "hint": "These stay on your phone. hisaab never guesses amounts — a message it can't read with certainty waits here instead of becoming a wrong number.",
     "contribute": "Share to improve hisaab",
     "contributeSoon": "Sharing (with everything personal removed, only after you review it) arrives in a later update."
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "capture": "Capture",
+    "notificationAccess": "Notification access",
+    "on": "On",
+    "off": "Off",
+    "grantNotificationAccess": "Turn on notification access",
+    "diagnostics": "Diagnostics",
+    "about": "About",
+    "pledge": "hisaab reads earning notifications on your phone. Everything stays on your phone. No account. No internet. Free forever. The code is public — anyone can check.",
+    "verify": "How do I verify this?",
+    "phase4Note": "Payout checking, export and delete-everything arrive in the next update."
+  },
+  "diagnostics": {
+    "title": "Diagnostics",
+    "localNote": "Everything below is counted on your phone and never leaves it.",
+    "empty": "Stats appear after your first day of orders.",
+    "coverage": "How much hisaab could read",
+    "readOf": "{{parsed}} of {{total}}",
+    "counts": "Captured so far",
+    "captured": "Captured",
+    "parsed": "Read",
+    "unparsed": "Waiting",
+    "ignored": "Skipped (no money info)",
+    "errors": "Read errors",
+    "gapMarkers": "Possible capture gaps",
+    "shareSoon": "\"Share my stats\" (counts only — never amounts, never messages) arrives in a later update."
+  },
+  "safeMode": {
+    "title": "hisaab hit a problem",
+    "body": "Your data is safe on your phone. Please share this error with the hisaab team on GitHub or WhatsApp."
+  },
+  "platforms": {
+    "swiggy": "Swiggy",
+    "zomato": "Zomato",
+    "blinkit": "Blinkit",
+    "zepto": "Zepto",
+    "upi-sms": "Bank / UPI SMS",
+    "unknown": "Unknown"
+  },
+  "monthsShort": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ],
+  "weekdaysShort": ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+  "time": {
+    "am": "am",
+    "pm": "pm"
   }
 }

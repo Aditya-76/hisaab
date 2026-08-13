@@ -15,8 +15,8 @@ tasks with a one-line reason.
 |---|---|---|
 | 0 — Scaffolding | Monorepo, CI, licenses, docs | ✅ Done |
 | 1 — Parsers first, no UI | Core types, wave-1 parsers, CLI harness | ✅ Done |
-| 2 — Capture pipeline | Kotlin capture → raw queue → parser → SQLite; unparsed queue stub | 🔨 **Now** |
-| 3 — Dashboard MVP | Net earnings home, per-platform, expenses, EN/HI/KN | ⬜ |
+| 2 — Capture pipeline | Kotlin capture → raw queue → parser → SQLite; unparsed queue stub | 🔶 Code done; device verification pending |
+| 3 — Dashboard MVP | Net earnings home, per-platform, expenses, EN/HI/KN | 🔨 **Now** |
 | 4 — Pilot readiness | Reconciliation, contribute flow, export/delete, signed APK, ≥90% parse coverage | ⬜ |
 
 ## Phase 0 — Scaffolding ✅
@@ -34,7 +34,7 @@ tasks with a one-line reason.
 - [x] CLI fixture harness: `parse`, `run-fixtures`, `coverage` (PR #2)
 - [ ] Replace synthetic fixtures file-for-file with anonymized real captures (ongoing, D-022 — carries into Phase 4 gate)
 
-## Phase 2 — Capture pipeline 🔨
+## Phase 2 — Capture pipeline 🔶
 
 - [x] `packages/app` scaffold (AGPL-3.0, React Native, TS strict)
 - [x] SQLite schema + ordered migrations, `PRAGMA user_version` gate (TECH-DESIGN §4)
@@ -50,13 +50,20 @@ tasks with a one-line reason.
 - [ ] Instrumented Android test set (listener insert, dedupe, gap marker) on emulator CI
 - [ ] Verify capture end-to-end on maintainer devices (MIUI + stock Android minimum) — **phase gate**
 
-## Phase 3 — Dashboard MVP ⬜
+## Phase 3 — Dashboard MVP 🔨
 
-- [ ] Net earnings home (day/week), per-platform split (UX §3.2–3.3)
-- [ ] Expense entry + overlay
-- [ ] i18next EN/हिन्दी/ಕನ್ನಡ full UI pass
+- [x] SQL dashboard views cross-checked against core aggregation: day summary, platform split, week strip, earnings list (TECH-DESIGN §6)
+- [x] Net earnings home (today/yesterday, hero number, platform split, week strip, unparsed + access-revoked banners, empty/zero-day states) (UX §3.2, §5.1)
+- [x] Expense entry: FAB → bottom sheet, category chips, recent amounts, paise-only path (UX §3.3)
+- [x] Orders history tab: newest-first list, platform filter, day headers, penalties in red (UX §2, E4)
+- [x] 4-tab shell (Home / Orders / Inbox / Settings) with Inbox badge (UX §2)
+- [x] Settings v1: language switch persisted in DB (migration 002, D-027), capture status, about/pledge
+- [x] Diagnostics screen: per-platform parse coverage + capture counts, local-only (INSTRUMENTATION §3); coverage/counts repos CI-tested
+- [x] i18next EN/हिन्दी/ಕನ್ನಡ full UI pass (incl. months/weekdays; light + dark theme)
+- [x] Local diagnostics events wired: `app.open`, `expense.added`, `settings.language_changed`; 180-day prune (INSTRUMENTATION §2)
 - [ ] Honest permission onboarding + OEM hardening flow (UX §3.1, §3.7)
-- [ ] Diagnostics screen (local-only metrics, INSTRUMENTATION §3)
+- [ ] "Share my stats" preview on Diagnostics (may slip to Phase 4 with the share flow)
+- [ ] Component tests for UX §5 states; EN/HI/KN manual screenshot pass on device — **phase gate**
 
 ## Phase 4 — Pilot readiness ⬜
 
