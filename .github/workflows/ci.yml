@@ -32,6 +32,9 @@ jobs:
       - name: Typecheck & build (tsc --build)
         run: pnpm build
 
+      - name: App typecheck (outside root references — TECH-DESIGN §2)
+        run: pnpm --filter @hisaab/app typecheck
+
       - name: Tests (Vitest)
         run: pnpm test
 

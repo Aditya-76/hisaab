@@ -24,6 +24,12 @@ export default defineConfig({
         extends: true,
         test: { name: "cli", include: ["packages/cli/src/**/*.test.ts"] },
       },
+      {
+        // Pipeline-only (db/drainer over node:sqlite, D-026): app UI code
+        // is not tested here and never imported by these tests.
+        extends: true,
+        test: { name: "app", include: ["packages/app/src/**/*.test.ts"] },
+      },
     ],
   },
 });

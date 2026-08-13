@@ -1,0 +1,16 @@
+<!-- Placeholder mark: three rising bars — earnings, plainly. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,62 h8 v16 h-8 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,50 h8 v28 h-8 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M66,38 h8 v40 h-8 z" />
+</vector>

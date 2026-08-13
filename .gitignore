@@ -4,3 +4,13 @@ dist/
 coverage/
 .DS_Store
 *.log
+
+# Android (packages/app)
+packages/app/android/**/build/
+packages/app/android/.gradle/
+packages/app/android/local.properties
+packages/app/android/**/*.keystore
+*.hprof
+
+# Metro
+.metro-health-check*

@@ -1,0 +1,53 @@
+apply plugin: "com.android.application"
+apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "com.facebook.react"
+
+/**
+ * React Native Gradle Plugin configuration.
+ * Docs: https://reactnative.dev/docs/react-native-gradle-plugin
+ */
+react {
+    autolinkLibrariesWithApp()
+}
+
+android {
+    ndkVersion rootProject.ext.ndkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdk rootProject.ext.compileSdkVersion
+
+    namespace "app.hisaab"
+    defaultConfig {
+        applicationId "app.hisaab"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "0.1.0"
+    }
+
+    // TECH-DESIGN §9: the Play Store variant is a build flag, not a fork.
+    // `full` = notification capture + opt-in SMS; `notificationOnly` never
+    // has SMS permissions in its manifest (see src/full/AndroidManifest.xml).
+    flavorDimensions = ["capture"]
+    productFlavors {
+        full { dimension "capture" }
+        notificationOnly { dimension "capture" }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // Pilot APKs get a real signing config in CI (Phase 4, PRD §18);
+            // debug-signed until then so local release builds work.
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    // The version of react-native is set by the React Native Gradle Plugin.
+    implementation("com.facebook.react:react-android")
+    implementation("com.facebook.react:hermes-android")
+}
