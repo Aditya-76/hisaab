@@ -1,0 +1,4 @@
+{
+  "input": "Order delivered to Ramesh Kumar. You earned ₹56 (incl. ₹10 tip).",
+  "expected": "Order delivered to <NAME>. You earned ₹56 (incl. ₹10 tip)."
+}

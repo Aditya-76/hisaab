@@ -1,0 +1,4 @@
+{
+  "input": "Missed call from +91-9876543210 regarding your delivery.",
+  "expected": "Missed call from <PHONE> regarding your delivery."
+}

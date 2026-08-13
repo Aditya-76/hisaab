@@ -32,9 +32,6 @@ importers:
 
   packages/core:
     dependencies:
-      date-fns:
-        specifier: ^4.1.0
-        version: 4.4.0
       zod:
         specifier: ^4.1.0
         version: 4.4.3
@@ -257,9 +254,6 @@ packages:
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
-
-  date-fns@4.4.0:
-    resolution: {integrity: sha512-+1UMbeh68lH1SegH83CGWwpb6OHHbpSgr3+s5Eww5M4CAgswBpoWS0AjTOfEJ33HiYKz1hdj/KTFprzXHmq/6w==}
 
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
@@ -668,8 +662,6 @@ snapshots:
   chai@6.2.2: {}
 
   convert-source-map@2.0.0: {}
-
-  date-fns@4.4.0: {}
 
   detect-libc@2.1.2: {}
 

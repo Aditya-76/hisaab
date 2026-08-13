@@ -1,0 +1,4 @@
+{
+  "input": "Order #SWG-448821 delivered! You earned ₹42.",
+  "expected": "Order <ID> delivered! You earned ₹42."
+}

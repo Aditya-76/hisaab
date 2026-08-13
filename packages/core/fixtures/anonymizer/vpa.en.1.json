@@ -1,0 +1,4 @@
+{
+  "input": "Rs.245.00 credited to a/c XX1234 by VPA swiggy-payouts@axisbank UPI Ref No 520912345678.",
+  "expected": "Rs.245.00 credited to a/c XX1234 by VPA <VPA> UPI Ref No <ID>."
+}
