@@ -104,6 +104,24 @@ The app never charges workers and never sells data. Funding: digital-rights/work
 
 Every dependency must carry an OSI-approved license; CI license audit fails otherwise. Follows from the trust strategy: the whole stack must be auditable, not just our code.
 
+## D-021 · 2026-08-13 · Accepted — Platform payout announcements are IncentiveEvents, not PayoutCredits
+
+A platform notification saying "weekly payout of ₹X processed" is the platform's *claim* about money; it parses to an `IncentiveEvent` with `promisedAmount = creditedAmount = X`. `PayoutCredit` is reserved exclusively for money actually observed on the payment rails (bank/UPI credit SMS).
+**Alternatives considered:** parsing payout announcements as `PayoutCredit` (double-counts against the bank SMS and destroys reconciliation's promised-vs-received semantics), a fourth event type (schema churn for no gain).
+**Why:** reconciliation (F3) compares platform claims to observed credits; keeping the two on separate types makes that comparison structural rather than heuristic.
+
+## D-022 · 2026-08-13 · Accepted — Bootstrap with a synthetic fixture corpus, replaced file-for-file by real captures
+
+Phase 1 ships parsers backed by ~44 **synthetic** fixtures (representative formats from public knowledge), each marked `"_meta": {"synthetic": true}`, with per-platform `SUPPORTED_VERSIONS.md` stating no version is verified. Zomato/Blinkit/Zepto package names are TO-VERIFY placeholders. Real anonymized captures (maintainer devices in the Phase-2 spike, then the contribution flow) replace synthetic files one-for-one; a parser counts as validated only when its platform lists a real app version.
+**Alternatives considered:** waiting for real captures before writing any parser (blocks the whole Phase-1 gate on device work), shipping unmarked synthetic fixtures (dishonest about coverage).
+**Why:** the harness, registry semantics, and CI gates are testable now; the corpus's synthetic status is explicit everywhere so nobody mistakes bootstrap data for validated coverage.
+
+## D-023 · 2026-08-13 · Accepted — IST day math uses a fixed +05:30 offset; no timezone database
+
+`istDayKey`/`istWeekKey` in `core` compute Asia/Kolkata calendar dates by plain +05:30 offset arithmetic. No tz library (and no date-fns dependency in core for now — it enters with the app for formatting).
+**Alternatives considered:** date-fns-tz/Intl zone lookups (pulls a tz database or host-dependent ICU into a hot path for a zone that never changes).
+**Why:** IST has had no DST and no offset changes in the app's lifetime; fixed-offset math is exact, dependency-free, and fast on low-end devices. If India ever changes its offset, the constant lives in one file (`core/src/time.ts`).
+
 ---
 
 ## How to add an entry
