@@ -1,0 +1,61 @@
+name: "📩 Notification sample (help hisaab learn)"
+description: "Paste an earnings/payout notification or bank SMS that hisaab missed or misread. No coding needed."
+title: "[sample] <platform>: <short description>"
+labels: ["fixture", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thank you!** Samples like this are how hisaab keeps understanding notifications when platforms change them.
+
+        **Anonymize before pasting** — replace, don't delete: names → `<NAME>`, phone numbers → `<PHONE>`, addresses → `<ADDRESS>`, order/reference IDs → `<ID>`, vehicle numbers → `<VEHICLE>`. **Keep the amounts (₹) and the exact wording/structure.**
+  - type: input
+    id: platform
+    attributes:
+      label: Platform / app
+      placeholder: "e.g. Swiggy Delivery, Zomato rider, HDFC bank SMS"
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: Settings → About in the platform app. "don't know" is fine.
+      placeholder: "e.g. 4.2.1 or don't know"
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language of the notification text
+      options:
+        - English
+        - Hindi
+        - Kannada
+        - Mixed
+        - Other (say which in the text below)
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Notification title
+      placeholder: "exactly as shown (anonymized)"
+  - type: textarea
+    id: text
+    attributes:
+      label: Notification text / SMS body
+      description: Full text, anonymized. Keep amounts and structure.
+      placeholder: "Order delivered! You earned ₹42 (incl. ₹10 tip) for order <ID>."
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: When it arrived (approx)
+      placeholder: "12 Aug, around 7:40 pm"
+  - type: textarea
+    id: meaning
+    attributes:
+      label: What it meant
+      placeholder: "I delivered an order and earned ₹42 including ₹10 tip"
+    validations:
+      required: true
