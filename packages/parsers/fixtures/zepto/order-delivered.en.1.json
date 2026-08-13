@@ -1,0 +1,18 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.zepto.rider",
+    "title": "Order delivered!",
+    "text": "₹40 earned for this delivery.",
+    "postedAt": "2026-08-12T17:35:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "earning",
+    "platform": "zepto",
+    "timestamp": "2026-08-12T17:35:00+05:30",
+    "kind": "order",
+    "grossAmount": 4000
+  },
+  "_meta": { "synthetic": true }
+}

@@ -1,0 +1,12 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.grofers.delivery",
+    "title": "Store update",
+    "text": "Store timings updated for your zone tomorrow.",
+    "postedAt": "2026-08-12T22:45:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": null,
+  "_meta": { "synthetic": true }
+}

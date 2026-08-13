@@ -1,0 +1,4 @@
+{
+  "input": "Vehicle KA01AB1234 verified for today's shift.",
+  "expected": "Vehicle <VEHICLE> verified for today's shift."
+}

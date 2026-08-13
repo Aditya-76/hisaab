@@ -1,0 +1,17 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "VM-ICICIB",
+    "text": "Acct XX881 credited with Rs 1,980.00 on 12-Aug-26 from ZOMATO MEDIA PRIVATE LIMITED. UPI:520912345678",
+    "postedAt": "2026-08-12T18:30:00+05:30"
+  },
+  "expected": {
+    "type": "payout",
+    "source": "upi",
+    "amount": 198000,
+    "timestamp": "2026-08-12T18:30:00+05:30",
+    "narration": "ZOMATO MEDIA PRIVATE LIMITED",
+    "accountHint": "XX881"
+  },
+  "_meta": { "synthetic": true, "basis": "ICICI UPI credit SMS template, public knowledge" }
+}

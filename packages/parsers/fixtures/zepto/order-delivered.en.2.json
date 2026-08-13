@@ -1,0 +1,19 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.zepto.rider",
+    "title": "Order delivered!",
+    "text": "₹58 earned for this delivery (incl. ₹15 tip).",
+    "postedAt": "2026-08-12T21:50:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "earning",
+    "platform": "zepto",
+    "timestamp": "2026-08-12T21:50:00+05:30",
+    "kind": "order",
+    "grossAmount": 5800,
+    "tips": 1500
+  },
+  "_meta": { "synthetic": true }
+}

@@ -1,0 +1,4 @@
+{
+  "input": "You earned ₹1,234.50 today across 18 orders. Incentive of ₹150 pending.",
+  "expected": "You earned ₹1,234.50 today across 18 orders. Incentive of ₹150 pending."
+}

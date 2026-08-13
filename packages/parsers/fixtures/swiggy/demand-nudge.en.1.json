@@ -1,0 +1,15 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "in.swiggy.deliveryapp",
+    "title": "Orders waiting!",
+    "text": "High demand in HSR Layout! Go online now to earn more.",
+    "postedAt": "2026-08-12T13:00:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": "ignored",
+  "_meta": {
+    "synthetic": true,
+    "note": "no concrete amount = no earnings data = ignorable chatter"
+  }
+}

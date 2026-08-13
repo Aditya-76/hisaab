@@ -1,0 +1,13 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "VM-RANDOM",
+    "text": "Rs.245.00 credited to a/c XX1234 by VPA someone@upi. UPI Ref No 520912345678.",
+    "postedAt": "2026-08-12T14:10:00+05:30"
+  },
+  "expected": null,
+  "_meta": {
+    "synthetic": true,
+    "note": "sender not on the allowlist: must stay unparsed even though the text looks like a credit"
+  }
+}

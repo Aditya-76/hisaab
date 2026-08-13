@@ -1,0 +1,10 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "VM-HDFCBK",
+    "text": "123456 is your OTP for HDFC Bank NetBanking login. Do not share it with anyone.",
+    "postedAt": "2026-08-12T10:00:00+05:30"
+  },
+  "expected": "ignored",
+  "_meta": { "synthetic": true }
+}

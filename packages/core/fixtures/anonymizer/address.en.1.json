@@ -1,0 +1,4 @@
+{
+  "input": "Deliver at 12/4, 5th Cross, Koramangala. Customer will meet at gate.",
+  "expected": "Deliver at <ADDRESS>. Customer will meet at gate."
+}

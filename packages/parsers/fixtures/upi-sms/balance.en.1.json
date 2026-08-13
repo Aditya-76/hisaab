@@ -1,0 +1,10 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "AD-SBIINB-S",
+    "text": "Avl Bal in a/c X5678 as of 12-08-26 is Rs.3,456.78. For details use SBI YONO.",
+    "postedAt": "2026-08-12T08:00:00+05:30"
+  },
+  "expected": "ignored",
+  "_meta": { "synthetic": true }
+}

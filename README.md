@@ -8,6 +8,20 @@ hisaab is a free, open-source, on-device earnings tracker for Indian gig workers
 - **Languages:** English · हिन्दी · ಕನ್ನಡ (more coming — hisaab speaks the worker's language).
 - **Privacy by architecture:** the app requests **no internet permission** — it cannot phone home even by accident. No account, no sign-in, no analytics. The code is public so anyone can verify.
 
+## Development quickstart
+
+The parsing engine (`packages/core`, `packages/parsers`, `packages/cli`) runs on plain Node — no Android toolchain needed:
+
+```sh
+pnpm install
+pnpm build     # tsc --build (project references; doubles as the typecheck)
+pnpm test      # vitest — every fixture in packages/parsers/fixtures must pass
+pnpm lint      # biome ci .
+node packages/cli/dist/index.js run-fixtures   # fixture pass table per platform
+```
+
+The easiest way to help: [contribute a notification sample](CONTRIBUTING.md) — no coding needed.
+
 ## Docs
 
 | Doc | What's in it |

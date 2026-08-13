@@ -1,0 +1,27 @@
+name: "🐞 Bug report"
+description: "Something broken in hisaab (app, parsers, CLI, build)"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead? Never paste raw notification text with personal data — anonymize first (see CONTRIBUTING.md).
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+  - type: input
+    id: version
+    attributes:
+      label: hisaab version / commit
+  - type: input
+    id: device
+    attributes:
+      label: Device & Android version (for app bugs)
+      placeholder: "e.g. Redmi Note 11, Android 13, MIUI 14"

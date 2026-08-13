@@ -1,0 +1,19 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.grofers.delivery",
+    "title": "Payout sent",
+    "text": "Weekly payout of ₹3,780 sent to your bank account.",
+    "postedAt": "2026-08-13T10:30:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "incentive",
+    "platform": "blinkit",
+    "timestamp": "2026-08-13T10:30:00+05:30",
+    "promisedAmount": 378000,
+    "creditedAmount": 378000,
+    "criteriaText": "Payout sent Weekly payout of ₹3,780 sent to your bank account."
+  },
+  "_meta": { "synthetic": true, "note": "platform claim → IncentiveEvent (D-021)" }
+}

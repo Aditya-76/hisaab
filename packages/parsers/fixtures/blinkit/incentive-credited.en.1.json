@@ -1,0 +1,19 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.grofers.delivery",
+    "title": "Surge bonus!",
+    "text": "₹90 added to today's earnings.",
+    "postedAt": "2026-08-12T20:00:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "incentive",
+    "platform": "blinkit",
+    "timestamp": "2026-08-12T20:00:00+05:30",
+    "promisedAmount": 9000,
+    "creditedAmount": 9000,
+    "criteriaText": "Surge bonus! ₹90 added to today's earnings."
+  },
+  "_meta": { "synthetic": true }
+}

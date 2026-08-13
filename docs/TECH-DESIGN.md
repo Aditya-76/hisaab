@@ -172,7 +172,7 @@ Raw-event flow needs no bridge marshalling: native writes SQLite, JS reads SQLit
 
 ## 6. Aggregation (`packages/core`)
 
-Pure functions over query results: net per day/week/platform, promised-vs-credited incentive gap, expense overlays. All date math in `Asia/Kolkata` via date-fns; week = Mon–Sun. Views are SQL-first (SUM/GROUP BY), core functions shape/format only — keeps low-end devices fast.
+Pure functions over query results: net per day/week/platform, promised-vs-credited incentive gap, expense overlays. All date math in `Asia/Kolkata` via fixed +05:30 offset arithmetic in `core/src/time.ts` — IST has no DST, so no timezone database is needed (D-023; date-fns enters with the app for formatting only); week = Mon–Sun. Views are SQL-first (SUM/GROUP BY), core functions shape/format only — keeps low-end devices fast.
 
 ## 7. Reconciliation engine (F3)
 

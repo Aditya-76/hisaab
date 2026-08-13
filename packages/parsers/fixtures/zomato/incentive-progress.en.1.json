@@ -1,0 +1,18 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.zomato.delivery",
+    "title": "Bonus alert",
+    "text": "You're 2 orders away from a ₹150 bonus!",
+    "postedAt": "2026-08-12T17:00:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "incentive",
+    "platform": "zomato",
+    "timestamp": "2026-08-12T17:00:00+05:30",
+    "promisedAmount": 15000,
+    "criteriaText": "Bonus alert You're 2 orders away from a ₹150 bonus!"
+  },
+  "_meta": { "synthetic": true }
+}

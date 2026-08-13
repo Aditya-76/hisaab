@@ -1,0 +1,17 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "AD-SBIINB-S",
+    "text": "Dear UPI user A/C X1234 credited by Rs245.0 on date 12Aug26 trf from SWIGGY LIMITED Refno 520912345678. -SBI",
+    "postedAt": "2026-08-12T14:06:00+05:30"
+  },
+  "expected": {
+    "type": "payout",
+    "source": "upi",
+    "amount": 24500,
+    "timestamp": "2026-08-12T14:06:00+05:30",
+    "narration": "SWIGGY LIMITED",
+    "accountHint": "X1234"
+  },
+  "_meta": { "synthetic": true, "basis": "SBI UPI credit SMS template, public knowledge" }
+}

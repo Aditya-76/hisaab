@@ -1,0 +1,16 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "VM-HDFCBK",
+    "text": "आपके a/c XX1234 में Rs.245.00 credited हुआ है। UPI Ref No 520912345678.",
+    "postedAt": "2026-08-12T14:07:00+05:30"
+  },
+  "expected": {
+    "type": "payout",
+    "source": "upi",
+    "amount": 24500,
+    "timestamp": "2026-08-12T14:07:00+05:30",
+    "accountHint": "XX1234"
+  },
+  "_meta": { "synthetic": true, "basis": "Hindi-register bank SMS variant, public knowledge" }
+}

@@ -1,0 +1,18 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "in.swiggy.deliveryapp",
+    "title": "Order delivered!",
+    "text": "You earned ₹42 for this order.",
+    "postedAt": "2026-08-12T19:42:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "earning",
+    "platform": "swiggy",
+    "timestamp": "2026-08-12T19:42:00+05:30",
+    "kind": "order",
+    "grossAmount": 4200
+  },
+  "_meta": { "synthetic": true }
+}

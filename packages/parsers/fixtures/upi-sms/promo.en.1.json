@@ -1,0 +1,10 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "VM-HDFCBK",
+    "text": "Get 5% cashback on fuel spends with your HDFC Bank credit card. T&C apply.",
+    "postedAt": "2026-08-12T09:30:00+05:30"
+  },
+  "expected": "ignored",
+  "_meta": { "synthetic": true, "note": "'credit card' must not trigger the credit parser" }
+}

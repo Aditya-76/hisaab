@@ -1,0 +1,10 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "VM-HDFCBK",
+    "text": "Rs.500.00 debited from a/c XX1234 for UPI txn to merchant@okaxis. UPI Ref 520911112222.",
+    "postedAt": "2026-08-12T13:00:00+05:30"
+  },
+  "expected": "ignored",
+  "_meta": { "synthetic": true, "note": "debits must never become payout credits" }
+}

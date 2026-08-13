@@ -1,0 +1,12 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.zomato.delivery",
+    "title": "Zomato",
+    "text": "Refer a friend and help them start earning with Zomato.",
+    "postedAt": "2026-08-12T11:00:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": "ignored",
+  "_meta": { "synthetic": true }
+}

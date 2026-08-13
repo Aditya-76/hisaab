@@ -1,0 +1,19 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.zomato.delivery",
+    "title": "Order delivered",
+    "text": "₹52 added to your earnings (₹8 customer tip).",
+    "postedAt": "2026-08-12T20:40:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "earning",
+    "platform": "zomato",
+    "timestamp": "2026-08-12T20:40:00+05:30",
+    "kind": "order",
+    "grossAmount": 5200,
+    "tips": 800
+  },
+  "_meta": { "synthetic": true }
+}

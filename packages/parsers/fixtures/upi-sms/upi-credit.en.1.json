@@ -1,0 +1,17 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "VM-HDFCBK",
+    "text": "Rs.245.00 credited to a/c XX1234 on 12-08-26 by VPA swiggy-payouts@axisbank (SWIGGY). UPI Ref No 520912345678.",
+    "postedAt": "2026-08-12T14:05:00+05:30"
+  },
+  "expected": {
+    "type": "payout",
+    "source": "upi",
+    "amount": 24500,
+    "timestamp": "2026-08-12T14:05:00+05:30",
+    "narration": "swiggy-payouts@axisbank",
+    "accountHint": "XX1234"
+  },
+  "_meta": { "synthetic": true, "basis": "HDFC UPI credit SMS template, public knowledge" }
+}

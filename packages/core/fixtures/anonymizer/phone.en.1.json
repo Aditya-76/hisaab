@@ -1,0 +1,4 @@
+{
+  "input": "Order picked up. Call customer on 98765 43210 if you can't find the gate.",
+  "expected": "Order picked up. Call customer on <PHONE> if you can't find the gate."
+}

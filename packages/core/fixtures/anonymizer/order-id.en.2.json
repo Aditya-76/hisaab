@@ -1,0 +1,4 @@
+{
+  "input": "Payment released for order id ZOM4432861. Order delivered on time.",
+  "expected": "Payment released for order id <ID>. Order delivered on time."
+}

@@ -1,0 +1,19 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.zomato.delivery",
+    "title": "Payout update",
+    "text": "Your weekly payout of ₹2,140 has been transferred to your bank.",
+    "postedAt": "2026-08-13T12:00:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "incentive",
+    "platform": "zomato",
+    "timestamp": "2026-08-13T12:00:00+05:30",
+    "promisedAmount": 214000,
+    "creditedAmount": 214000,
+    "criteriaText": "Payout update Your weekly payout of ₹2,140 has been transferred to your bank."
+  },
+  "_meta": { "synthetic": true, "note": "platform claim → IncentiveEvent (D-021)" }
+}

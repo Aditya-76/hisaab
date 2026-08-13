@@ -1,0 +1,17 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "AD-SBIINB-S",
+    "text": "Your a/c X5678 is credited by Rs.2,140.00 on 13Aug26 by NEFT from ZOMATO MEDIA PRIVATE LIMITED.",
+    "postedAt": "2026-08-13T12:20:00+05:30"
+  },
+  "expected": {
+    "type": "payout",
+    "source": "bank",
+    "amount": 214000,
+    "timestamp": "2026-08-13T12:20:00+05:30",
+    "narration": "ZOMATO MEDIA PRIVATE LIMITED",
+    "accountHint": "X5678"
+  },
+  "_meta": { "synthetic": true, "basis": "SBI NEFT credit SMS template, public knowledge" }
+}

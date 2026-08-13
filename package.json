@@ -1,0 +1,28 @@
+{
+  "name": "hisaab",
+  "version": "0.1.0",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome ci .",
+    "lint:fix": "biome check --write .",
+    "fixtures": "node packages/cli/dist/index.js run-fixtures",
+    "license-audit": "node scripts/license-audit.mjs",
+    "check-boundaries": "node scripts/check-dependency-boundaries.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.8",
+    "@types/node": "^24.10.9",
+    "typescript": "~5.9.3",
+    "vitest": "^4.1.10"
+  }
+}

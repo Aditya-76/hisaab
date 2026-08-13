@@ -1,0 +1,18 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.zepto.rider",
+    "title": "ಆರ್ಡರ್ ಡೆಲಿವರಿ ಆಯಿತು!",
+    "text": "ಈ ಡೆಲಿವರಿಗೆ ₹40 ಗಳಿಸಿದ್ದೀರಿ.",
+    "postedAt": "2026-08-12T17:50:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "earning",
+    "platform": "zepto",
+    "timestamp": "2026-08-12T17:50:00+05:30",
+    "kind": "order",
+    "grossAmount": 4000
+  },
+  "_meta": { "synthetic": true }
+}

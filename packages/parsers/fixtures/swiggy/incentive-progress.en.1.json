@@ -1,0 +1,18 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "in.swiggy.deliveryapp",
+    "title": "Kamai ka mauka!",
+    "text": "Complete 3 more orders to earn ₹120 extra today!",
+    "postedAt": "2026-08-12T16:00:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "incentive",
+    "platform": "swiggy",
+    "timestamp": "2026-08-12T16:00:00+05:30",
+    "promisedAmount": 12000,
+    "criteriaText": "Kamai ka mauka! Complete 3 more orders to earn ₹120 extra today!"
+  },
+  "_meta": { "synthetic": true }
+}

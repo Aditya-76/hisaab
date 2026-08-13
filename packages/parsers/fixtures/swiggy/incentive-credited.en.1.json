@@ -1,0 +1,19 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "in.swiggy.deliveryapp",
+    "title": "Incentive unlocked!",
+    "text": "₹120 added to your earnings.",
+    "postedAt": "2026-08-12T22:05:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "incentive",
+    "platform": "swiggy",
+    "timestamp": "2026-08-12T22:05:00+05:30",
+    "promisedAmount": 12000,
+    "creditedAmount": 12000,
+    "criteriaText": "Incentive unlocked! ₹120 added to your earnings."
+  },
+  "_meta": { "synthetic": true }
+}

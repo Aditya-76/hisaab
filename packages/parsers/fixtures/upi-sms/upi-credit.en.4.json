@@ -1,0 +1,20 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "BP-PYTMBK",
+    "text": "Rs.120 received in your a/c XX443 from zepto.rider@paytm. UPI Ref: 520998765432.",
+    "postedAt": "2026-08-12T21:15:00+05:30"
+  },
+  "expected": {
+    "type": "payout",
+    "source": "upi",
+    "amount": 12000,
+    "timestamp": "2026-08-12T21:15:00+05:30",
+    "narration": "zepto.rider@paytm",
+    "accountHint": "XX443"
+  },
+  "_meta": {
+    "synthetic": true,
+    "basis": "Paytm Payments Bank credit SMS template, public knowledge"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "input": "A/c XX1234 credited with Rs.1,980.00 on 12-Aug-26 by IMPS Ref 620912345678.",
+  "expected": "A/c XX1234 credited with Rs.1,980.00 on 12-Aug-26 by IMPS Ref <ID>."
+}

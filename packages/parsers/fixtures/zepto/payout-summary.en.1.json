@@ -1,0 +1,19 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.zepto.rider",
+    "title": "Payout processed",
+    "text": "Your payout of ₹3,120 for this week has been processed.",
+    "postedAt": "2026-08-13T09:45:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "incentive",
+    "platform": "zepto",
+    "timestamp": "2026-08-13T09:45:00+05:30",
+    "promisedAmount": 312000,
+    "creditedAmount": 312000,
+    "criteriaText": "Payout processed Your payout of ₹3,120 for this week has been processed."
+  },
+  "_meta": { "synthetic": true, "note": "platform claim → IncentiveEvent (D-021)" }
+}
