@@ -124,6 +124,30 @@ Phase 1 ships parsers backed by ~44 **synthetic** fixtures (representative forma
 
 ---
 
+## D-024 · 2026-08-13 · Accepted — raw_events DDL is dual-owned (Kotlin bootstrap + JS migration), guarded by a CI identity test
+
+The Kotlin capture module executes the `raw_events` DDL (`CREATE TABLE IF NOT EXISTS`) on first write; JS migration 001 runs the identical statements. The DDL string lives twice — `packages/app/src/db/schema.ts` and `RawEventStore.kt` — and `schema-contract.test.ts` fails CI unless they are byte-identical (it also pins the DB filename, parsed-state codes, gap-marker package, and that the capture allowlist is a superset of the parser registry).
+**Alternatives considered:** native waits for JS migrations (loses capture before first app open — unacceptable, capture must survive the RN runtime being dead, TECH-DESIGN §5.1); code-generating Kotlin from TS (build machinery for one table).
+**Why:** two plain copies with a drift alarm is the simplest thing that keeps the invariant honest. Only `raw_events` is dual-owned; every other table belongs solely to JS migrations.
+
+---
+
+## D-025 · 2026-08-13 · Accepted — capture gap markers are ordinary raw_events rows, pre-marked ignored
+
+Capture outages (listener reconnect, boot) are recorded as `raw_events` rows from the pseudo-package `app.hisaab.capture` with `parsed = ignored`, so they never enter the parse queue or the unparsed-queue UI but stay queryable for diagnostics and UX E2's "data may be missing" notices.
+**Alternatives considered:** separate `capture_gaps` table (second write path in native code for the same information); SharedPreferences flags (not queryable next to the event timeline they annotate).
+**Why:** one native write path, one timeline; the marker's `posted_at` sits exactly where the gap sits.
+
+---
+
+## D-026 · 2026-08-13 · Accepted — app pipeline is tested on Linux CI via node:sqlite behind a Db interface
+
+The app's DB/pipeline code (migrations, repos, drainer) is written against a 4-method `Db` interface; production implements it over op-sqlite, tests over Node's built-in `node:sqlite` — real SQLite semantics (partial indexes, FK constraints, transactions) with zero React Native or emulator involvement. The app package stays OUT of the root tsc project references and gets its own CI typecheck step, so core/parsers/cli keep building with zero RN reach (TECH-DESIGN §2).
+**Alternatives considered:** mocking SQL calls (tests would pass while real SQL fails — the partial-index and FK bugs caught on day one prove the point); emulator-only testing (slow, flaky, gates nothing on PRs).
+**Why:** the pipeline is the part of the app where correctness is money; it now has the same fixture-grade CI coverage as the parsers. Instrumented tests on emulator remain the plan for the native capture layer itself.
+
+---
+
 ## How to add an entry
 
 1. Copy the format: ID, date, status, one-line decision, alternatives considered, why (and consequences).
