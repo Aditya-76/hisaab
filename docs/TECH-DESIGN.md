@@ -129,7 +129,7 @@ CREATE TABLE diagnostics_log ( id, event TEXT, at TEXT, props TEXT );  -- local-
 
 - **Money is integer paise.** No floats anywhere in money paths.
 - **Days** are precomputed `Asia/Kolkata` calendar dates for cheap aggregation (`SELECT day, SUM(...) GROUP BY day`).
-- **Migrations:** ordered TS migration files, run in a transaction at boot; `user_version` gate; failure path = safe-mode screen with raw export (UX §5.3). Every migration lands with an up-test in CI from a seeded fixture DB.
+- **Migrations:** ordered TS migration files, run in a transaction at boot; `user_version` gate; failure path = safe-mode screen with raw export (UX §5.3). Every migration lands with an up-test in CI from a seeded fixture DB. The `raw_events` DDL is dual-owned with the Kotlin capture module (`IF NOT EXISTS` on both sides, byte-identity guarded in CI) so capture works before JS has ever run (D-024).
 - **Retention:** raw text of parsed events prunable after 90 days (user setting, default on); normalized rows kept forever; unparsed raw kept until contributed/dismissed (UX E10).
 - **Backup:** `android:allowBackup="false"` — Google auto-backup would silently copy the DB to Google's cloud and break the on-device pledge. Restore story is manual export/import (UX E11).
 

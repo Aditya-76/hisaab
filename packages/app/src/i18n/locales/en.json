@@ -1,0 +1,23 @@
+{
+  "shell": {
+    "title": "hisaab",
+    "subtitle": "Phase 2 dev shell — the dashboard arrives in Phase 3",
+    "captureStatus": "Capture status",
+    "notificationAccess": "Notification access",
+    "granted": "On",
+    "denied": "Off",
+    "grantNotificationAccess": "Turn on notification access",
+    "lastEvent": "Last captured",
+    "never": "nothing captured yet",
+    "drained": "{{parsed}} parsed · {{unparsed}} waiting · {{ignored}} skipped"
+  },
+  "unparsed": {
+    "title": "Couldn't read these yet",
+    "empty": "Everything captured so far has been understood.",
+    "count_one": "{{count}} message waiting",
+    "count_other": "{{count}} messages waiting",
+    "hint": "These stay on your phone. hisaab never guesses amounts — a message it can't read with certainty waits here instead of becoming a wrong number.",
+    "contribute": "Share to improve hisaab",
+    "contributeSoon": "Sharing (with everything personal removed, only after you review it) arrives in a later update."
+  }
+}

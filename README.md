@@ -20,6 +20,8 @@ pnpm lint      # biome ci .
 node packages/cli/dist/index.js run-fixtures   # fixture pass table per platform
 ```
 
+The Android app (`packages/app`, React Native + Kotlin capture module) needs an Android SDK to build — see [packages/app/README.md](packages/app/README.md). Its DB/parse pipeline is still tested on plain Node in CI.
+
 The easiest way to help: [contribute a notification sample](CONTRIBUTING.md) — no coding needed.
 
 ## Docs
@@ -31,6 +33,7 @@ The easiest way to help: [contribute a notification sample](CONTRIBUTING.md) —
 | [docs/TECH-DESIGN.md](docs/TECH-DESIGN.md) | Architecture, data model, native capture, rollout |
 | [docs/INSTRUMENTATION.md](docs/INSTRUMENTATION.md) | Privacy-preserving measurement ("Share my stats") |
 | [docs/DECISIONS.md](docs/DECISIONS.md) | Append-only log of every product/technical decision and why |
+| [TRACKER.md](TRACKER.md) | Execution tracker: what's done, in flight, and next, per phase |
 
 ## Licensing
 
