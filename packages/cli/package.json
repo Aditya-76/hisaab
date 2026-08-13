@@ -21,6 +21,7 @@
   ],
   "dependencies": {
     "@hisaab/core": "workspace:*",
-    "@hisaab/parsers": "workspace:*"
+    "@hisaab/parsers": "workspace:*",
+    "zod": "^4.1.0"
   }
 }

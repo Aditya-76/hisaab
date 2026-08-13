@@ -29,6 +29,9 @@ importers:
       '@hisaab/parsers':
         specifier: workspace:*
         version: link:../parsers
+      zod:
+        specifier: ^4.1.0
+        version: 4.4.3
 
   packages/core:
     dependencies:
