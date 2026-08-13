@@ -1,0 +1,19 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.zepto.rider",
+    "title": "Rain surge!",
+    "text": "Rain surge bonus ₹60 credited to your earnings.",
+    "postedAt": "2026-08-12T19:00:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "incentive",
+    "platform": "zepto",
+    "timestamp": "2026-08-12T19:00:00+05:30",
+    "promisedAmount": 6000,
+    "creditedAmount": 6000,
+    "criteriaText": "Rain surge! Rain surge bonus ₹60 credited to your earnings."
+  },
+  "_meta": { "synthetic": true }
+}

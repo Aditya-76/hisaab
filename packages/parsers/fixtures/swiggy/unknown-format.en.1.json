@@ -1,0 +1,15 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "in.swiggy.deliveryapp",
+    "title": "Your summary",
+    "text": "Your Tuesday summary is ready. Tap to view.",
+    "postedAt": "2026-08-12T23:00:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": null,
+  "_meta": {
+    "synthetic": true,
+    "note": "allowlisted app, unrecognized format: must go to the unparsed queue, never be guessed at"
+  }
+}

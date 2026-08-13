@@ -1,0 +1,17 @@
+{
+  "input": {
+    "source": "sms",
+    "sender": "VM-HDFCBK",
+    "text": "Rs.4,560.00 credited to a/c XX1234 on 13-08-26 by a/c linked to SWIGGY LIMITED (IMPS Ref 620912345678).",
+    "postedAt": "2026-08-13T11:00:00+05:30"
+  },
+  "expected": {
+    "type": "payout",
+    "source": "bank",
+    "amount": 456000,
+    "timestamp": "2026-08-13T11:00:00+05:30",
+    "narration": "SWIGGY LIMITED",
+    "accountHint": "XX1234"
+  },
+  "_meta": { "synthetic": true, "basis": "HDFC IMPS credit SMS template, public knowledge" }
+}

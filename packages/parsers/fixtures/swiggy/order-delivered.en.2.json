@@ -1,0 +1,19 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "in.swiggy.deliveryapp",
+    "title": "Order delivered!",
+    "text": "You earned ₹56 (incl. ₹10 tip) for this order.",
+    "postedAt": "2026-08-12T20:15:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "earning",
+    "platform": "swiggy",
+    "timestamp": "2026-08-12T20:15:00+05:30",
+    "kind": "order",
+    "grossAmount": 5600,
+    "tips": 1000
+  },
+  "_meta": { "synthetic": true }
+}

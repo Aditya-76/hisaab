@@ -1,0 +1,12 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "in.swiggy.deliveryapp",
+    "title": "Monsoon offer!",
+    "text": "Get a new raincoat at 50% discount from the gear store.",
+    "postedAt": "2026-08-12T12:00:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": "ignored",
+  "_meta": { "synthetic": true }
+}

@@ -1,0 +1,18 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.grofers.delivery",
+    "title": "Order delivered!",
+    "text": "You earned ₹35 for this order.",
+    "postedAt": "2026-08-12T18:05:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "earning",
+    "platform": "blinkit",
+    "timestamp": "2026-08-12T18:05:00+05:30",
+    "kind": "order",
+    "grossAmount": 3500
+  },
+  "_meta": { "synthetic": true }
+}

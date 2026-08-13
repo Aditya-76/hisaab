@@ -18,6 +18,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "@hisaab/core": "workspace:*"
+    "@hisaab/core": "workspace:*",
+    "zod": "^4.1.0"
   }
 }

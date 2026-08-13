@@ -1,0 +1,19 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "com.zomato.delivery",
+    "title": "Bonus earned!",
+    "text": "₹150 credited to your Zomato earnings.",
+    "postedAt": "2026-08-12T22:30:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "incentive",
+    "platform": "zomato",
+    "timestamp": "2026-08-12T22:30:00+05:30",
+    "promisedAmount": 15000,
+    "creditedAmount": 15000,
+    "criteriaText": "Bonus earned! ₹150 credited to your Zomato earnings."
+  },
+  "_meta": { "synthetic": true }
+}

@@ -1,0 +1,22 @@
+{
+  "input": {
+    "source": "notification",
+    "packageName": "in.swiggy.deliveryapp",
+    "title": "Payout processed",
+    "text": "Weekly payout of ₹4,560 processed to your bank account.",
+    "postedAt": "2026-08-13T11:05:00+05:30",
+    "appVersion": "0.0.0-synthetic"
+  },
+  "expected": {
+    "type": "incentive",
+    "platform": "swiggy",
+    "timestamp": "2026-08-13T11:05:00+05:30",
+    "promisedAmount": 456000,
+    "creditedAmount": 456000,
+    "criteriaText": "Payout processed Weekly payout of ₹4,560 processed to your bank account."
+  },
+  "_meta": {
+    "synthetic": true,
+    "note": "platform claim → IncentiveEvent (D-021); the bank SMS is the PayoutCredit"
+  }
+}
