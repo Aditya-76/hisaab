@@ -16,6 +16,7 @@ hisaab is a free, open-source, on-device earnings tracker for Indian gig workers
 | [docs/UX-DESIGN.md](docs/UX-DESIGN.md) | Flows, wireframes, edge cases, empty states |
 | [docs/TECH-DESIGN.md](docs/TECH-DESIGN.md) | Architecture, data model, native capture, rollout |
 | [docs/INSTRUMENTATION.md](docs/INSTRUMENTATION.md) | Privacy-preserving measurement ("Share my stats") |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | Append-only log of every product/technical decision and why |
 
 ## Licensing
 

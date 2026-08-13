@@ -8,6 +8,9 @@ Authoritative docs — read these before making product or architecture decision
 - [docs/UX-DESIGN.md](docs/UX-DESIGN.md) — flows, wireframes, edge cases, empty states
 - [docs/TECH-DESIGN.md](docs/TECH-DESIGN.md) — architecture, schema, native/JS contracts, rollout
 - [docs/INSTRUMENTATION.md](docs/INSTRUMENTATION.md) — local-only metrics, "Share my stats" protocol
+- [docs/DECISIONS.md](docs/DECISIONS.md) — append-only decision log (D-001…) with alternatives and rationale
+
+**Decision log rule:** any change to scope, architecture, privacy posture, licensing, or money handling gets a new entry in `docs/DECISIONS.md` (append-only; supersede, never edit) in the same PR that makes the change. Check the log before re-opening a settled question.
 
 ## Why this exists
 
